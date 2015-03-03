@@ -35,50 +35,54 @@ grunt.initConfig({
 });
 ```
 
-### Options
+### paramObj
 
-#### options.separator
+#### paramObj.message
 Type: `String`
-Default value: `',  '`
+Default value: `''`
 
-A string value that is used to do something with whatever.
+(Optional) Push message
 
-#### options.punctuation
+#### paramObj.distribution_key
 Type: `String`
-Default value: `'.'`
+Default value: `''`
 
-A string value that is used to do something else with whatever else.
+Replace [distribution_key] with your distribution page URL hash key.
+https://deploygate.com/distributions/[distribution_key]
+
+#### paramObj.release_note
+Type: `String`
+Default value: `''`
+
+(Optional) Distribution message
+
+#### paramObj.disable_notify
+Type: `String`
+Default value: `''`
+
+(Optional) If you set yes as a value, disable notify via email.(iOS only.)
+
+#### paramObj.visibility
+Type: `String`
+Default value: `'private'`
+
+(Optional) Set a new application's privacy setting by specifying private(default) or public. If you are using Personal Free account, you have to specify public to upload a new app since it doesn't have a slot for private app. No effect when updating.
 
 ### Usage Examples
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+#### Default Usage
 
 ```js
 grunt.initConfig({
-  deploygate: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  deploygate: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
+deploygate: {
+            src: 'location/to/file',
+            options: {
+                url: "https://deploygate.com/api/users/[owner_name]/apps",
+                paramObj: {
+                    'token': "API_Key"
+                }
+            }
+        }
 });
 ```
 
