@@ -25,18 +25,22 @@ In your project's Gruntfile, add a section named `deploygate` to the data object
 ```js
 grunt.initConfig({
   deploygate: {
+    src:'location/to/file',
     options: {
       // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    }
   },
 });
 ```
 
 ### paramObj
 
+#### paramObj.token
+Type: `String`
+Default value: `''`
+```css
+Required
+```
 #### paramObj.message
 Type: `String`
 Default value: `''`
