@@ -33,6 +33,24 @@ grunt.initConfig({
 });
 ```
 
+### Usage Examples
+
+#### Default Usage
+
+```js
+grunt.initConfig({
+deploygate: {
+            src: 'location/to/file',
+            options: {
+                url: "https://deploygate.com/api/users/[owner_name]/apps",
+                paramObj: {
+                    'token': "API_Key"
+                }
+            }
+        }
+});
+```
+
 ### paramObj
 
 #### paramObj.token
@@ -71,24 +89,6 @@ Type: `String`
 Default value: `'private'`
 
 (Optional) Set a new application's privacy setting by specifying private(default) or public. If you are using Personal Free account, you have to specify public to upload a new app since it doesn't have a slot for private app. No effect when updating.
-
-### Usage Examples
-
-#### Default Usage
-
-```js
-grunt.initConfig({
-deploygate: {
-            src: 'location/to/file',
-            options: {
-                url: "https://deploygate.com/api/users/[owner_name]/apps",
-                paramObj: {
-                    'token': "API_Key"
-                }
-            }
-        }
-});
-```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
