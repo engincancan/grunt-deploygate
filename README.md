@@ -1,6 +1,6 @@
 # grunt-deploygate
 
-> Grunt plugin for File upload to deploygate
+> Grunt plugin for File upload to [Deploygate](http://deploygate.com/)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
