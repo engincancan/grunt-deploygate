@@ -38,10 +38,7 @@ module.exports = function(grunt) {
                 }
             },
             custom_options: {
-                options: {
-                    separator: ': ',
-                    punctuation: ' !!!'
-                },
+                options: {},
                 files: {
                     'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
                 }
@@ -55,7 +52,6 @@ module.exports = function(grunt) {
 
     });
 
-    //require('grunt-log-headers')(grunt);
     // Actually load this plugin's task(s).
     grunt.loadTasks('tasks');
 

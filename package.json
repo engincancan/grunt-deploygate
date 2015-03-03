@@ -1,52 +1,55 @@
 {
-    "name": "grunt-deploygate",
-    "description": "Grunt plugin for File upload to deploygate",
-    "version": "0.1.0",
-    "homepage": "https://github.com/engincancan/grunt-deploygate",
-    "author": {
-        "name": "Engin CAN",
-        "email": "engincancan@gmail.com",
-        "url": "engincancan.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/engincancan/grunt-deploygate"
-    },
-    "bugs": {
-        "url": "https://github.com/engincancan/grunt-deploygate/issues"
-    },
-    "licenses": [{
-        "type": "MIT",
-        "url": "https://github.com/engincancan/grunt-deploygate/blob/master/LICENSE-MIT"
-    }],
-    "engines": {
-        "node": ">= 0.8.0"
-    },
-    "scripts": {
-        "test": "grunt test"
-    },
-    "devDependencies": {
-        "grunt": "~0.4.5",
-        "grunt-contrib-clean": "^0.5.0",
-        "grunt-contrib-jshint": "^0.9.2",
-        "grunt-contrib-nodeunit": "^0.3.3"
-    },
-    "peerDependencies": {
-        "grunt": "~0.4.5"
-    },
-    "keywords": [
-        "gruntplugin"
-    ],
-    "dependencies": {
-        "async": "^0.6.2",
-        "request": "~2.34.0",
-        "tough-cookie": ">=0.12.0",
-        "form-data": "~0.1.0",
-        "tunnel-agent": "~0.3.0",
-        "http-signature": "~0.10.0",
-        "oauth-sign": "~0.3.0",
-        "hawk": "~1.0.0",
-        "aws-sign2": "~0.5.0",
-        "load-grunt-tasks": "^3.1.0"
+  "name": "grunt-deploygate",
+  "description": "Grunt plugin for File upload to deploygate",
+  "version": "0.1.0",
+  "homepage": "https://github.com/engincancan/grunt-deploygate",
+  "author": {
+    "name": "Engin CAN",
+    "email": "engincancan@gmail.com",
+    "url": "engincancan.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/engincancan/grunt-deploygate"
+  },
+  "bugs": {
+    "url": "https://github.com/engincancan/grunt-deploygate/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/engincancan/grunt-deploygate/blob/master/LICENSE-MIT"
     }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-nodeunit": "^0.3.3"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "async": "^0.6.2",
+    "aws-sign2": "~0.5.0",
+    "form-data": "~0.1.0",
+    "grunt-log-headers": "^1.0.1",
+    "hawk": "~1.0.0",
+    "http-signature": "~0.10.0",
+    "load-grunt-tasks": "^3.1.0",
+    "oauth-sign": "~0.3.0",
+    "request": "~2.34.0",
+    "tough-cookie": ">=0.12.0",
+    "tunnel-agent": "~0.3.0"
+  }
 }

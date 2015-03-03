@@ -9,12 +9,15 @@
 'use strict';
 module.exports = function(grunt) {
 
+
+    require('grunt-log-headers')(grunt);
     // Please see the Grunt documentation for more information regarding task
     // creation: http://gruntjs.com/creating-tasks
     grunt.registerMultiTask('deploygate', 'Grunt plugin for File upload to deploygate', function() {
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
-            method: "POST"
+            method: "POST",
+            gruntLogHeader: false
         });
         // Iterate over all specified file groups.
         this.files.forEach(function(f) {
@@ -29,8 +32,8 @@ module.exports = function(grunt) {
                     return true;
                 }
             });
-            grunt.config('upload_file.default_options.src', src);
-            grunt.config('upload_file.default_options.options', options);
+            grunt.config('upload_file.deploygate.src', src);
+            grunt.config('upload_file.deploygate.options', options);
             grunt.task.run("upload_file");
         });
     });
